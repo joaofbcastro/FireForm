@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireForm</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="logo">🔥 FireForm</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a onclick=openModal()>Adicionar</a></li>
+                <li><a href="#">Respostas</a></li>
+            </ul>
+        </nav>
+        <div id="modal">
+            <form id="newPost" action="/">
+                <textarea name="message" id="" required></textarea>
+                <button class="button" type="submit">Enviar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Publicações</h2>
+            <ul class="postList">
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Feito com 💜 por <a target="_blank" href="https://github.com/joaofbcastro">João Castro</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
