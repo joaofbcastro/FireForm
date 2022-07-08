@@ -49,6 +49,7 @@ const insertPost = (post) => {
 
 const updateLocalStorage = (list) => {
     localStorage.setItem('postList', JSON.stringify(list));
+    location.reload(true);
 }
 
 const localStoragePostList = JSON.parse(localStorage.getItem('postList'));
@@ -85,7 +86,11 @@ function removePost(post) {
             let index = postList.indexOf(itemPost);
             postList.splice(index, 1);
             updateLocalStorage(postList)
-            location.reload()
         }
     })
+}
+
+function cleanPosts() {
+    localStorage.clear()
+    location.reload()
 }
