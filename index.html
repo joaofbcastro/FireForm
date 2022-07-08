@@ -15,15 +15,21 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a onclick=openModal()>Adicionar</a></li>
+                <li><a onclick=toggleModal()>Adicionar</a></li>
                 <li><a href="#">Respostas</a></li>
             </ul>
         </nav>
         <div id="modal">
-            <form id="newPost" action="#">
-                <textarea name="message" id="" required></textarea>
-                <button class="button" type="submit">Enviar</button>
-            </form>
+            <div class="content">
+                <div class="header">
+                    <h5 class="title">Novo comentário</h5>
+                    <button class="button-close" onclick=toggleModal()></button>
+                </div>
+                <form id="newPost" action="#">
+                    <textarea name="message" id="" required></textarea>
+                    <button class="button" type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </header>
 
