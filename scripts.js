@@ -49,11 +49,17 @@ const insertPost = (post) => {
 
 const updateLocalStorage = (list) => {
     localStorage.setItem('postList', JSON.stringify(list));
-    location.reload()
 }
 
 const localStoragePostList = JSON.parse(localStorage.getItem('postList'));
-let postList = localStorage.getItem('postList') !== null ? localStoragePostList : []
+let postList = localStorage.getItem('postList') !== null ? localStoragePostList : [{
+    author: 'Boas vindas!',
+    message: 'Seja o primeiro à publicar aqui.',
+    authorAvatar: 'https://picsum.photos/200',
+    postId: 777
+}]
+
+console.log(postList)
 
 postList.forEach((post) => {
     insertPost(post)
@@ -79,6 +85,7 @@ function removePost(post) {
             let index = postList.indexOf(itemPost);
             postList.splice(index, 1);
             updateLocalStorage(postList)
+            location.reload()
         }
     })
 }
