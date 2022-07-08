@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="Rocket Links" src="./assets/preview.png" width="100%">
+  <a target="_blank" href="https://joaofbcastro.github.io/FireForm"><img alt="Rocket Links" src="./assets/preview.png" width="100%"></a>
 </p>
 
 ## 💻 O que é?
