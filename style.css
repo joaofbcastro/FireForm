@@ -29,9 +29,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem;
-    margin-bottom: 2rem;
-}
+    padding: 1rem;
+    margin-bottom: 2rem;}
 
 header .logo {
     font-size: 3rem;
@@ -40,7 +39,7 @@ header .logo {
 
 header ul {
     display: flex;
-    align-items: center;;
+    align-items: center;
 }
 
 header ul a {
@@ -49,7 +48,7 @@ header ul a {
 
     padding: .5rem;
     border-bottom: 1px solid transparent;
-    transition: border-bottom .3s;
+    transition: all .3s;
 }
 
 header ul a:hover {
@@ -57,27 +56,30 @@ header ul a:hover {
 }
 
 #modal {
-    display: none;
+    visibility: hidden;
     position: fixed;
     width: 100vw;
-    top: 50vh;
+    top: -100vh;
     left: 50vw;
     transform: translate(-50%, -50%);
 
+    padding: 1rem;
     z-index: 1;
+    transition: all .5s;
 }
 
 #modal.modal-open {
-    display: block;
+    visibility: visible;
+    top: 50vh;
 }
 
 #modal .content {
-    max-width: 34rem; 
+    max-width: 36rem; 
     margin: 0 auto;
     padding: 1rem;
     border-radius: 6px;
-    background-color: #555555ee;
-    box-shadow: 5px 5px 10px #777;
+    background-color: #ED7617;
+    box-shadow: 5px 5px 10px #f19041;
 }
 
 #modal .header {
@@ -91,19 +93,23 @@ header ul a:hover {
     font-size: 1.5rem;
 }
 
- .button-close {
+.button-close {
     cursor: pointer;
     width: 2em;
     height: 2em;
     padding: .25rem;
-    background: transparent url("https://cdn-icons-png.flaticon.com/512/1828/1828665.png") center/1.5em no-repeat;
+    background: transparent url("https://cdn-icons.flaticon.com/png/512/2976/premium/2976286.png?token=exp=1657250729~hmac=4186a10658e36c18e2d1699e10065536") center/1.5em no-repeat;
     border-radius: .375rem;
     border: 0;
     opacity: .5;
     transition: opacity .5s;
 }
 
- .button-close:hover {
+.button-close.trash {
+    background-image: url("https://cdn-icons.flaticon.com/png/512/3405/premium/3405244.png?token=exp=1657250806~hmac=d268ef0b9cb3247116b3050c77105ce6");
+}
+
+.button-close:hover {
     opacity: 1;
 }
 
@@ -127,12 +133,28 @@ header ul a:hover {
 }
 
 .postItem {
+    overflow-x: hidden;
+    position: relative;
     display: flex;
-    padding: .5rem .8rem;
+    padding: 1.5rem 1rem;
     border-radius: 5px;
-    background-color: #d9d9d9;
+    background: #d9d9d9;
     box-shadow: 5px 5px 10px #cccccc;
     margin-bottom: 1.5rem;
+
+    transition: all .2s;
+}
+
+.postItem:hover {
+    background: hsl(34, 70%, 70%);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px hsl(34, 70%, 80%);
+}
+
+.postItem .button-close {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
 }
 
 .postAuthorAvatar {
@@ -168,4 +190,13 @@ footer {
 
 footer:hover {
     opacity: 1;
+}
+
+a.active {
+    color:hsl(34, 80%, 50%);
+}
+
+header ul li a:hover {
+    color:#ffcc4d;
+    border-color: #ffcc4d;
 }

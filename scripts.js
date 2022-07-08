@@ -18,6 +18,7 @@ const insertPost = (post) => {
 
     const closeButton = document.createElement('button');
     closeButton.classList.add('button-close');
+    closeButton.classList.add('trash');
     closeButton.setAttribute('postid', post.postId);
     closeButton.addEventListener('click', () => removePost(post.postId));
 
@@ -48,6 +49,7 @@ const insertPost = (post) => {
 
 const updateLocalStorage = (list) => {
     localStorage.setItem('postList', JSON.stringify(list));
+    location.reload()
 }
 
 const localStoragePostList = JSON.parse(localStorage.getItem('postList'));
@@ -69,7 +71,6 @@ function addNewPost(e) {
     }
     postList.push(post)
     updateLocalStorage(postList)
-    toggleModal()
 }
 
 function removePost(post) {
@@ -78,7 +79,6 @@ function removePost(post) {
             let index = postList.indexOf(itemPost);
             postList.splice(index, 1);
             updateLocalStorage(postList)
-            location.reload()
         }
     })
 }
