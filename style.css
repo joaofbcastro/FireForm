@@ -96,10 +96,12 @@ header ul li a:hover {
 #modal .content {
     max-width: 36rem; 
     margin: 0 auto;
-    padding: 1rem;
-    border-radius: 6px;
-    background-color: #aaaaaa;
-    box-shadow: 5px 5px 10px #777777;
+    padding: 1.2rem;
+    border-radius: 8px;
+
+    background: #fec051;
+    background: linear-gradient(135deg, #fec051 0%, #fd4a31 100%); 
+    box-shadow: 5px 5px 10px #574846;
     transition: all .6s;
 }
 
@@ -122,7 +124,7 @@ header ul li a:hover {
 
 #modal textarea {
     resize: none;
-    border: 1px solid #ffa64d;
+    border: 2px solid #000000;
 
     font-size: 1.2rem;
 
@@ -138,7 +140,7 @@ header ul li a:hover {
 #modal .button {
     cursor: pointer;
 
-    color: #633609;
+    color: #000000;
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -150,13 +152,14 @@ header ul li a:hover {
     border: none;
     border-radius: 8px;
     
-    background:#ffa64d;
-    box-shadow: .1rem .1rem .3rem #777;
+    background:#FFF;
+    box-shadow: .1rem .1rem .3rem #333;
     transition: all .3s;
 }
 
 #modal .button:hover {
-    background:#ff8e4d;
+    background:#CCC;
+    box-shadow: -.1rem -.1rem .3rem #333;
 }
 
 
