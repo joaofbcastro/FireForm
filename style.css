@@ -11,7 +11,7 @@
 }
 
 :root {
-    --backgroundColor: #222831;
+    --backgroundColor: hsl(216, 10%,40%);
     --primaryColor: #ffcc4d;
     --primaryLightColor: #FF9F45;
     --secondaryColor: #FF5722;
