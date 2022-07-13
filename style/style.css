@@ -73,7 +73,7 @@ body {
 }
 
 .postItem .postContent {
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -91,6 +91,7 @@ body {
 }
 
 .postButtons {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -98,9 +99,11 @@ body {
 }
 
 .postButtons .postLocale {
+    display: flex;
+    align-items: center;
     margin-right: auto;
     color: #00000099;
-    font-size: 1.2rem;
+    font-size: .8rem;
 }
 
 

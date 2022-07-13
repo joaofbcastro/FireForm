@@ -15,12 +15,35 @@ function toggleModal () {
   
 const insertPost = (post) => {
     const postList = document.querySelector('.postList')
+    
+    const btnLike = document.createElement('button');
+    btnLike.classList.add('button');
+    btnLike.classList.add('btn-like');
 
-    const closeButton = document.createElement('button');
-    closeButton.classList.add('button');
-    closeButton.classList.add('btn-trash');
-    closeButton.setAttribute('postid', post.postId);
-    closeButton.addEventListener('click', () => removePost(post.postId));
+    const btnComment = document.createElement('button');
+    btnComment.classList.add('button');
+    btnComment.classList.add('btn-comment');
+
+    const btnLocale = document.createElement('button');
+    btnLocale.classList.add('button');
+    btnLocale.classList.add('btn-locale');
+
+    const postLocale = document.createElement('p');
+    postLocale.classList.add('postLocale');
+    postLocale.textContent = post.locale;
+    postLocale.insertAdjacentElement('afterbegin', btnLocale);
+
+    const postButtons = document.createElement('div');
+    postButtons.classList.add('postButtons');
+    postButtons.insertAdjacentElement('beforeend', postLocale);
+    postButtons.insertAdjacentElement('beforeend', btnComment);
+    postButtons.insertAdjacentElement('beforeend', btnLike);
+
+    const trashButton = document.createElement('button');
+    trashButton.classList.add('button');
+    trashButton.classList.add('btn-trash');
+    trashButton.setAttribute('postid', post.postId);
+    trashButton.addEventListener('click', () => removePost(post.postId));
 
     const postMessage = document.createElement('p');
     postMessage.classList.add('postMessage');
@@ -30,9 +53,11 @@ const insertPost = (post) => {
     postAuthorName.classList.add('postAuthorName');
     postAuthorName.textContent = post.author;
 
-    const div = document.createElement('div');
-    div.insertAdjacentElement('beforeend', postAuthorName);
-    div.insertAdjacentElement('beforeend', postMessage);
+    const postContent = document.createElement('div');
+    postContent.classList.add('postContent');
+    postContent.insertAdjacentElement('beforeend', postAuthorName);
+    postContent.insertAdjacentElement('beforeend', postMessage);
+    postContent.insertAdjacentElement('beforeend', postButtons);
 
     const postAuthorAvatar = document.createElement('img');
     postAuthorAvatar.classList.add('postAuthorAvatar');
@@ -41,8 +66,8 @@ const insertPost = (post) => {
     const postItem = document.createElement('li');
     postItem.classList.add('postItem');
     postItem.insertAdjacentElement('beforeend', postAuthorAvatar);
-    postItem.insertAdjacentElement('beforeend', div);
-    postItem.insertAdjacentElement('beforeend', closeButton);
+    postItem.insertAdjacentElement('beforeend', postContent);
+    postItem.insertAdjacentElement('beforeend', trashButton);
 
     postList.insertAdjacentElement('afterbegin', postItem);
 }
@@ -54,9 +79,10 @@ const updateLocalStorage = (list) => {
 
 const localStoragePostList = JSON.parse(localStorage.getItem('postList'));
 let postList = localStorage.getItem('postList') !== null ? localStoragePostList : [{
-    author: 'Boas vindas!',
-    message: 'Seja o primeiro à publicar aqui.',
+    author: 'Robert the Robot',
+    message: 'Boas vindas! Seja o primeiro à publicar aqui.',
     authorAvatar: 'https://picsum.photos/200',
+    locale: "Códigos, Arquivos",
     postId: 777
 }]
 
@@ -74,6 +100,7 @@ function addNewPost(e) {
         author: `Usuário #${getRandomInt(1000, 9999)}`,
         message: e.target.message.value,
         authorAvatar: `https://picsum.photos/${getRandomInt(200, 780)}`,
+        locale: "Brasil",
         postId: getRandomInt(100000, 999999)
     }
     postList.push(post)
