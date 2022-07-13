@@ -3,36 +3,39 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireForm</title>
+
+    <!-- FavIcon Settings -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FireForm</title>
-
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/main.css">
 
 </head>
 <body>
     <header>
-        <a href="https://joaofbcastro.github.io/FireForm"><h1 class="logo">🔥 FireForm</h1></a>
+        <a href="https://joaofbcastro.github.io/FireForm">
+            <h1 class="logo">🔥 FireForm</h1>
+        </a>
         <nav>
             <ul>
-                <li><a class="active" href="https://joaofbcastro.github.io/FireForm">Home</a></li>
-                <li><a onclick=toggleModal()>Publicar</a></li>
-                <li><a onclick=cleanPosts()>Limpar Posts</a></li>
+                <li><a class="button btn-home active" href="https://joaofbcastro.github.io/FireForm"></a></li>
+                <li><a class="button btn-post" onclick=toggleModal()></a></li>
+                <li><a class="button btn-profile" onclick=cleanPosts()></a></li>
             </ul>
         </nav>
         <div id="modal">
             <div class="content">
                 <div class="header">
                     <h5 class="title">Novo comentário</h5>
-                    <button class="button-close" onclick=toggleModal()></button>
+                    <button class="button btn-close" onclick=toggleModal()></button>
                 </div>
                 <form id="newPost" action="" >
                     <textarea name="message" required></textarea>
@@ -46,6 +49,20 @@
         <div class="container">
             <h2>Publicações</h2>
             <ul class="postList">
+                <li class="postItem">
+                    <img class="postAuthorAvatar" src="https://picsum.photos/199">
+                    <div class="postContent">
+                        <h3 class="postAuthorName">Publicação de teste</h3>
+                        <p class="postMessage">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <div class="postButtons">
+                            <p class="postLocale">
+                                <button class="button btn-locale">Localização</button> Brasil</p>
+                            <button class="button btn-comment">Comentar</button>
+                            <button class="button btn-like">Curtir</button>
+                        </div>
+                    </div>
+                    <button class="button btn-trash" postid="7787"></button>
+                </li>
             </ul>
         </div>
     </main>
@@ -58,11 +75,17 @@
             <div>
                 Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
             </div>
+            <div>
+                Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+            <div>
+                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
         </div>
         <p>Feito com 💜 por <a target="_blank" href="https://github.com/joaofbcastro">João Castro</a></p>
     </footer>
     
     <!-- JavaScript -->
-    <script src="scripts.js"></script>
+    <script src="source/main.js"></script>
 </body>
 </html>

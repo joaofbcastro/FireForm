@@ -1,0 +1,140 @@
+/*
+    Olá Sr, o CSS dessa aplicação encontra-se num estado de
+    porcaria total, mas saiba que minha intenção é de uma pessoa com
+    bom coração e tenho a intenção de deixa-lo belo em breve. <3
+*/
+
+textarea:focus, input:focus {
+    outline: 2px solid var(--primaryLightColor);
+}
+
+body {
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 36rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: .5rem 1.5rem;
+
+    font-family: 'Roboto', sans-serif;
+    background: var(--backgroundColor);
+}
+
+.postList {
+    margin: .5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #FFFFFF66;
+}
+
+.postItem {
+    cursor: pointer;
+
+    color: #000;
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #DDD;
+    box-shadow: 3px 3px 10px #BBB;
+    margin-bottom: 1.5rem;
+
+    transition: all .2s;
+}
+
+.postItem:hover {
+    color: #000;
+    background: hsl(34, 70%, 70%);
+    transform: scale(1.03);
+    box-shadow: 3px 3px 10px hsl(34, 70%, 80%);
+}
+
+.postItem .button.btn-trash {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    
+    visibility: hidden;
+}
+
+.postItem:hover .button.btn-trash {
+    visibility: visible;
+}
+
+.postAuthorAvatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    padding: 2px;
+    border-radius: 100px;
+    border: 2px solid purple; 
+    background-color: white;
+}
+
+.postItem .postContent {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.postAuthorName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.postMessage {
+    display: block;
+
+    opacity: .6;
+    font-size: 1rem;
+}
+
+.postButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: .6rem;
+}
+
+.postButtons .postLocale {
+    margin-right: auto;
+    color: #00000099;
+    font-size: 1.2rem;
+}
+
+
+/* footer */
+
+
+footer {
+    color: var(--fontColor);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 1rem;
+    margin-top: 1rem;
+
+    opacity: .6;
+    transition: opacity .5s;
+}
+
+footer a {
+    color: var(--fontDarkColor);
+}
+
+footer p:hover {
+    opacity: 1;
+}
+
+footer div.iconsCredits {
+    opacity: .4;
+    font-size: 8px;
+    font-weight: 500;
+}

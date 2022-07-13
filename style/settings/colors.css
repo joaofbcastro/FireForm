@@ -1,0 +1,9 @@
+:root {
+    --backgroundColor: hsl(216, 10%,40%);
+    --primaryColor: #ffcc4d;
+    --primaryLightColor: #FF9F45;
+    --secondaryColor: #FF5722;
+    --fontColor: #EEEEEE;
+    --fontDarkColor: #DDDDDD;
+    --fontHoverColor: #FF5722;
+}

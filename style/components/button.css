@@ -1,0 +1,74 @@
+.button {
+    display: inline-block;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    padding: .5rem;
+    border-radius: .375rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+
+
+.button.btn-home {
+    filter: invert(1);
+    background: transparent url("../../assets/icons/png/001-home.png") center/1.5em no-repeat;
+}
+
+.button.btn-post {
+    filter: invert(1);
+    background: transparent url("../../assets/icons/png/003-edit.png") center/1.5em no-repeat;
+}
+
+.button.btn-profile {
+    filter: invert(1);
+    background: transparent url("../../assets/icons/png/002-user.png") center/1.5em no-repeat;
+}
+
+
+
+.button.btn-close {
+    opacity: .5;
+    transform: scale(0.8);
+    background: transparent url("../../assets/icons/png/001-close.png") center/1.5em no-repeat;
+}
+
+
+
+.button.btn-trash {
+    opacity: .5;
+    transform: scale(0.8);
+    background: transparent url("../../assets/icons/png/002-trash.png") center/1.5em no-repeat;
+}
+
+
+.button.btn-locale {
+    color: transparent;
+    border-radius: 50%;
+    background: no-repeat center/1rem url("../../assets/icons/png/006-location-pin.png");
+}
+
+.button.btn-like {
+    color: transparent;
+    border-radius: 50%;
+    background: no-repeat center/1rem url("../../assets/icons/png/004-like.png");
+}
+
+.button.btn-comment {
+    color: transparent;
+    border-radius: 50%;
+    background: no-repeat center/1rem url("../../assets/icons/png/005-comment.png");
+}
+
+.button.btn-like:hover,
+.button.btn-comment:hover {
+    background-color: #FFFFFF66;
+}
+
+
+
+.button:hover {
+    opacity: 1;
+    transform: scale(1);
+}

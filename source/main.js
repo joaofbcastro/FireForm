@@ -17,8 +17,8 @@ const insertPost = (post) => {
     const postList = document.querySelector('.postList')
 
     const closeButton = document.createElement('button');
-    closeButton.classList.add('button-close');
-    closeButton.classList.add('trash');
+    closeButton.classList.add('button');
+    closeButton.classList.add('btn-trash');
     closeButton.setAttribute('postid', post.postId);
     closeButton.addEventListener('click', () => removePost(post.postId));
 

@@ -1,0 +1,27 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+header .logo {
+    font-size: 3rem;
+    color: var(--fontColor);
+}
+
+header ul {
+    display: flex;
+    gap: .5rem;
+    line-height: 0px;
+}
+
+header ul .button {
+    font-size: 1.2rem; 
+}
+
+header ul li a.button:hover {
+    transform: scale(1.1);
+}
