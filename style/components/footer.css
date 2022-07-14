@@ -1,0 +1,31 @@
+footer {
+    color: var(--fontColor);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 1rem;
+    margin-top: 1rem;
+
+    opacity: .6;
+    transition: opacity .5s;
+}
+
+footer a {
+    color: var(--fontDarkColor);
+}
+
+footer p:hover {
+    opacity: 1;
+}
+
+footer div.iconsCredits {
+    opacity: .4;
+    font-size: 8px;
+    font-weight: 500;
+}

@@ -1,0 +1,83 @@
+.postList {
+    margin: .5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #FFFFFF66;
+}
+
+.postItem {
+    cursor: pointer;
+
+    color: #000;
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #DDD;
+    box-shadow: 3px 3px 10px #BBB;
+    margin-bottom: 1.5rem;
+
+    transition: all .2s;
+}
+
+.postItem:hover {
+    color: #000;
+    background: hsl(34, 70%, 70%);
+    transform: scale(1.03);
+    box-shadow: 3px 3px 10px hsl(34, 70%, 80%);
+}
+
+.postItem .button.btn-trash {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    
+    visibility: hidden;
+}
+
+.postItem:hover .button.btn-trash {
+    visibility: visible;
+}
+
+.postAuthorAvatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    padding: 2px;
+    border-radius: 100px;
+    border: 2px solid purple; 
+    background-color: white;
+}
+
+.postItem .postContent {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.postAuthorName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.postMessage {
+    display: block;
+
+    opacity: .6;
+    font-size: 1rem;
+}
+
+.postButtons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: .6rem;
+}
+
+.postButtons .postLocale {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    color: #00000099;
+    font-size: .8rem;
+}
