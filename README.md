@@ -22,6 +22,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 
+## 💻 Como acessar
+
+Você pode acessar o projeto acessando o site: *[FireForm](https://joaofbcastro.github.io/FireForm)*
+
 ---
 
 Desenvolvido com 💜 por **[João Castro](https://github.com/joaofbcastro)**.
